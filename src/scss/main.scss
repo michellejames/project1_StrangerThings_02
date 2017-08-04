@@ -1,0 +1,529 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	background: black;
+	overflow: hidden;
+	margin: 0;
+}
+
+// .settingBkg {
+// 	position: relative;
+// 	overflow: hidden;
+
+// }
+
+.wrapper {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	margin: 0 auto;
+}
+
+
+.lights-link, 
+.hand-link,
+.tree-link {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 1;
+}
+
+.lights {
+	background-image: url(../assets/img/lights.png);
+	width: 130px;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	@media (min-width: 960px) {
+		width: 23.69791667%;
+	}
+}
+
+.netflix-red {
+	position: absolute;
+	width: 20.83333333%;
+	top: 3%;
+	right: 8.5%;
+
+	@media (min-width: 960px) {
+		width: 9.635416667%;
+		top: 85%;
+		// left: 78%;
+		// left: 0;
+		right: 4%;
+		z-index: 10;
+	}
+}
+
+.release {
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0px 30px 0 0;
+	// display: inline-block;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 1.75px;
+	font-weight: 100;
+	font-size: 1rem;
+
+	@media (min-width: 960px) {
+		position: absolute;
+		transform: translate(-50%, -50%);
+		top: 50%;
+		left: 50%;
+		margin-top: 20%;
+		font-size: 1.5em;
+	}
+}
+
+.hand {
+	position: relative;
+	width: 47.91666667%;
+	bottom: 0;
+	left: 0;
+
+
+	@media (min-width: 960px) {
+		position: absolute;
+		width: 31.25%;
+		// bottom: 0;
+		// left: 0;
+	}
+}
+
+.tree {
+	width: 41.66666667%;
+	position: relative;
+	bottom: 0;
+	right: 0;
+
+	@media (min-width: 960px) {
+		position: absolute;
+		width: 26.04166667%;
+		height: 100%;
+		top: 0;
+		right: 0;
+	}
+}
+
+.main {
+	position: relative;
+	top: 0;
+
+	.season {
+		width: 55.20833333%;
+		position: absolute;
+		transform: translate(-50%, -50%);
+		top: 70%;
+		left: 50%;
+
+			&:hover {
+				
+			}
+
+		@media (min-width: 960px) {
+			width: 30.20833333%;
+			top: 45%;
+		}
+	}
+
+	.title {
+		transform: scale(1.5);
+		margin-top: 50%;
+		
+	}
+
+	@media (min-width: 960px) {
+
+
+		.title{
+			// position: relative;
+			top: 10%;
+			transform: scale(1);
+			margin: 0;
+
+			// width: 80%;
+			
+		}
+		top: -7%;
+	}
+}
+
+
+//////////// LIGHTS PAGE /////////////
+
+.background {
+	background-image: url(../../assets/img/Lights/Mobile/mobile-lights.png);
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	@media (min-width: 768px) {
+		background-image: url(../../assets/img/Lights/Tablet/img/no-lights.png);
+	}
+
+	@media (min-width: 960px) {
+		background-image: url(../../assets/img/Lights/Desktop/img/all-lights.png);
+	}
+}
+
+.backgroundH {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url(../../assets/img/Lights/Mobile/img/H-light.png);
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 20;
+
+	@media (min-width: 768px) {
+		background-image: url(./../assets/img/Lights/Tablet/img/H-light.png);
+	}
+
+	@media (min-width: 960px) {
+		background-image: url(../../assets/img/Lights/Desktop/img/H-light.png);
+	}
+}
+
+.backgroundE {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url(../../assets/img/Lights/Mobile/img/E-light.png);
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 15;
+
+	@media (min-width: 768px) {
+		background-image: url(../../assets/img/Lights/Tablet/img/E-light.png);
+	}
+
+	@media (min-width: 960px) {
+		background-image: url(../../assets/img/Lights/Desktop/img/E-light.png);
+
+	}
+}
+
+.backgroundL {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url(../../assets/img/Lights/Mobile/img/L-light.png);
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	z-index: 10;
+
+	@media (min-width: 768px) {
+		background-image: url(../../assets/img/Lights/Tablet/img/L-light.png);
+	}
+
+	@media (min-width: 960px) {
+		background-image: url(../../assets/img/Lights/Desktop/img/L-light.png);
+		z-index: 5;
+	}
+}
+
+.backgroundP {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url(../../assets/img/Lights/Mobile/img/P-light.png);
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	@media (min-width: 768px) {
+		background-image: url(../../assets/img/Lights/Tablet/img/P-light.png);
+	}
+
+	@media (min-width: 960px) {
+		background-image: url(../../assets/img/Lights/Desktop/img/P-light.png);
+		z-index: 5;
+	}
+}
+
+.netflix-white {
+	z-index: 100;
+	width: 21.875%;
+	position: absolute;
+	top: 5%;
+	left: 10%;
+
+	@media (min-width: 960px) {
+		width: 7.96875%;
+		left: 5.572916667%;
+	}
+}
+
+.logo-small {
+	z-index: 100;
+	width: 16.66666667%;
+	position: absolute;
+	right: 10%;
+	bottom: 5%;
+
+	@media (min-width: 768px) {
+		width: 18.75%;
+		right: 6.770833333%;
+	}
+
+	@media (min-width: 960px) {
+		width: 9.114583333%;
+		right: 3.541666667%;
+	}
+}
+
+.navigation {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	bottom: 0;
+
+	@media (min-width: 768px) {
+		width: 35.9375%;
+	}
+}
+
+.arrow {
+	z-index: 100;
+	background-image: url(../../assets/img/Lights/Desktop/img/next-arrow.svg);
+	background-repeat: no-repeat;
+	border: 3px solid #b61406;
+	position: absolute;
+	width: 3%;
+	height: 5%;
+	padding: 5%;
+	bottom: 5.719298246%;
+	opacity: .5;
+
+	&:hover {
+		opacity: 1;
+		-webkit-box-shadow: 0px 0px 78px 2px rgba(182,20,6,1);
+		-moz-box-shadow: 0px 0px 78px 2px rgba(182,20,6,1);
+		box-shadow: 0px 0px 78px 2px rgba(182,20,6,1);
+	}
+	
+}
+
+.previous {
+	// background: rgba(0,0,0,.2);
+	z-index: 100;
+	transform: rotate(180deg);
+	left: 8.958333333%;
+}
+
+.next {
+	z-index: 100;
+	left: 51.04166667%;
+
+}
+
+.circle {
+	width: 2.5%;
+	height: 1.403508772%;
+	background: #b61406;
+	background-repeat: no-repeat;
+	border-radius: 100px;
+	position: absolute;
+	bottom: 8.187134503%;
+	opacity: .5;
+	z-index: 50;
+
+	&:hover {
+		opacity: 1;
+		-webkit-box-shadow: 0px 0px 78px 2px rgba(182,20,6,1);
+		-moz-box-shadow: 0px 0px 78px 2px rgba(182,20,6,1);
+		box-shadow: 0px 0px 78px 2px rgba(182,20,6,1);
+		width: 3.75%;
+		height: 2.105263158%;
+	}
+}
+
+.circle1 {
+    left: 27.08333333%;
+}
+
+.circle2 {
+	left: 35.41666667%;
+}
+
+.circle3 {
+	left: 42.70833333%;
+}
+
+.active {
+	opacity: 1;
+	-webkit-box-shadow: 0px 0px 78px 2px rgba(182,20,6,1);
+	-moz-box-shadow: 0px 0px 78px 2px rgba(182,20,6,1);
+	box-shadow: 0px 0px 78px 2px rgba(182,20,6,1);
+	width: 3.75%;
+	height: 2.105263158%;
+}
+
+
+
+
+
+
+
+//////////// Character PAGE /////////////
+
+
+.nancy-link {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.nancy {
+	position: absolute;
+	width: 25.41666667%;
+	top: 3.040935673%;
+	left: 38.54166667%;
+
+	@media (min-width: 768px) {
+		width: 22.91666667%;
+		top: 21.09375%;
+		left: 52.08333333%;	
+	}
+}
+
+.lucas {
+	position: absolute;
+	width: 30.41666667%;
+	top: 12.86549708%;
+	left: 2.416666667%;
+
+	@media (min-width: 768px) {
+		width: 25%;
+		top: 10.9375%;
+		left: 7.8125%;	
+	}
+}
+
+.steve {
+	position: absolute;
+	width: 32.41666667%;
+	top: 11.4502924%;
+	left: 62.70833333%;
+
+	@media (min-width: 768px) {
+		width: 30%;
+		top: 8.59375%;
+		left: 68.47916667%;	
+	}
+}
+
+.jonathan {
+	position: absolute;
+	width: 33.08333333%;
+	top: 24.56140351%;
+	left: 26.25%;
+
+	@media (min-width: 768px) {
+		width: 28%;
+		top: 19.53125%;
+		left: 21.04166667%;	
+	}
+}
+
+.dustin {
+	position: absolute;
+	width: 25%;
+	top: 32.16374269%;
+	left: 3.125%;
+
+	@media (min-width: 768px) {
+		width: 25%;
+		top: 31.25%;
+		left: 6.25%;	
+	}
+}
+
+.joyce {
+	position: absolute;
+	width: 39.16666667%;
+	top: 33.33333333%;
+	right: 1.041666667%;
+
+	@media (min-width: 768px) {
+		width: 36.45833333%;
+		top: 34.375%;
+		left: 62.5%;	
+	}
+}
+
+.mike {
+	position: absolute;
+	width: 27.08333333%;
+	top: 42.69005848%;
+	left: 35.41666667%;
+
+	@media (min-width: 768px) {
+		width: 25%;
+		top: 39.0625%;
+		left: 34.375%;	
+	}
+}
+
+.will {
+	position: absolute;
+	width: 27.08333333%;
+	top: 53.80116959%;
+	left: 3.125%;
+
+	@media (min-width: 768px) {
+		width: 28%;
+		top: 55.46875%;
+		left: 5.208333333%;	
+	}
+}
+
+.hopper {
+	position: absolute;
+	width: 67.66666667%;
+	top: 59.41520468%;
+	right: -16.083333333%;
+
+	@media (min-width: 768px) {
+		width: 60.02083333%;
+		top: 60.15625%;
+		left: 53.89583333%;	
+	}
+}
+
+.eleven {
+	position: absolute;
+	width: 70.66666667%;
+	top: 63.74269006%;
+	left: -2%;
+
+	@media (min-width: 768px) {
+		width: 70.33333333%;
+		top: 64.59375%;
+		left: 2.125%;	
+	}
+}
+
+
+
+
+
+
+
+
+
