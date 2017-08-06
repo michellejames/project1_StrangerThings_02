@@ -592,7 +592,7 @@ module.exports = Parallax;
 
 
 
-}).call(this,require('_process'))
+}).call(this,require('_process'));
 },{"_process":3}],3:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
@@ -630,7 +630,7 @@ function defaultClearTimeout () {
     } catch (e) {
         cachedClearTimeout = defaultClearTimeout;
     }
-} ())
+} ());
 function runTimeout(fun) {
     if (cachedSetTimeout === setTimeout) {
         //normal enviroments in sane situations
@@ -767,13 +767,13 @@ process.emit = noop;
 process.prependListener = noop;
 process.prependOnceListener = noop;
 
-process.listeners = function (name) { return [] }
+process.listeners = function (name) { return []; };
 
 process.binding = function (name) {
     throw new Error('process.binding is not supported');
 };
 
-process.cwd = function () { return '/' };
+process.cwd = function () { return; '/' };
 process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
@@ -856,5 +856,5 @@ module.exports.polyfill = function () {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"performance-now":2}]},{},[1])(1)
+},{"performance-now":2}]},{},[1])(1);
 });

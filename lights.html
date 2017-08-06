@@ -19,18 +19,14 @@
 	</head>
 	<body>
 
-<!-- 	<section id="scene">
-		<div class="layer background-layer" data-depth="0.2"></div>
-		<div class="layer raindrops-layer" data-depth="0.5"></div>
-		<div class="layer" data-depth="0.75">
-			<h1 class="shadow">Parallax!</h1>
-		</div>
-		<div class="layer" data-depth="0.8">
-			<h1>Test</h1>
-		</div>
-	</section> -->
-
-
+		<section id="scene">
+			<div class="layer background-layer" data-depth="0.2">
+				<canvas class="snow" width="1920" height="1920" />
+			</div>
+			<div class="layer lights-layer" data-depth="0.5"></div>
+			<div class="layer hand-layer" data-depth="0.75"></div>
+			<div class="layer tree-layer" data-depth="0.85"></div>
+		</section>
 
 		<div class="backgroundTest backgroundH"></div>
 		<div class="backgroundTest backgroundE"></div>
@@ -40,7 +36,14 @@
 
 		<img class="netflix-white" src="assets/img/Lights/Desktop/img/Netflix-white.png" alt="">
 
-		<img class="logo-small" src="assets/img/Lights/Desktop/img/StrangerThings2.png" alt="">
+		<video class="lights-trailer" controls="control" type="video/mp4" src="assets/img/Lights/Desktop/video/joyce_05.mp4">
+		Sorry, your browser doesn't support embedded videos, 
+		but don't worry, you can <a href="https://vimeo.com/228320823">watch it</a>
+		right here!
+		<source src="https://vimeo.com/228320823" >
+		</video>
+
+
 
 		<div class="navigation">	
 			<div class="arrow previous"></div>
@@ -50,7 +53,7 @@
 			<div class="arrow next active"></div>
 		</div>
 
-
+		<img class="logo-small" src="assets/img/Lights/Desktop/img/StrangerThings2.png" alt="">
 
 		<script
 		  src="https://code.jquery.com/jquery-3.2.1.js"
