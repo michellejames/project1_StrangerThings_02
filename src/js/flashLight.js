@@ -19,6 +19,7 @@ function flashLight (light, {height, width, backgroundColor}) {
 		"border-width": window.innerWidth * 2 + "px", 
 		"border-style": "solid",
 		"border-radius": "50%",
+		"filter": "blur(5px)",
 		"margin-left":-window.innerWidth*2-(this.width/2), 
 		"margin-top": -window.innerWidth*2-(this.width/2), 
 		"position": "absolute"});

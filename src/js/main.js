@@ -136,7 +136,7 @@ $(function() {
 	});
 
 	// function showSnow() {
-	// 	if ($("body").hasClass("characterPage")) {
+	// 	if ($("canvas").hasClass("characterPageSnow")) {
 	// 	$(".snow").css( "z-index", "800" );	
 	// 	}
 	// };
