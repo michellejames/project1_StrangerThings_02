@@ -35,6 +35,8 @@ var preloadables = [
 	"assets/img/tree/img/normaltree-02.png",
 	//"assets/img/tree/img/upside-down.png",
 	"assets/img/tree/img/portal-02.png",
+	"assets/img/Lights/Mobile/img/all-lights.png",
+	"assets/img/Lights/Tablet/img/all-lights.png",
 
 ]
 var preloadingImage;
@@ -106,11 +108,17 @@ $(function () {
 	});
 
 	function lightsFlickering() {
-	    setInterval(function(){ 
-	    	$(".backgroundLights").fadeIn(500).css( "z-index", "800" ).fadeOut(500);
+	    var flickering = setInterval(function(){ 
+	    	$(".backgroundLights").fadeIn(50).css( "z-index", "800" ).fadeOut(50);
 	    }, 4500);
+
+	    if ($(".lightsTrailer").fadeTo(50)) {
+	    	clearInterval(flickering);
+	    }
 	}
 	lightsFlickering();
+
+
 });
 
 // Character Page //
@@ -119,6 +127,13 @@ $(function() {
 	$('.arrowImg').on('click', function() {
 		$('.drawer').hide();
 	});
+
+	// function showSnow() {
+	// 	if ($("body").hasClass("characterPage")) {
+	// 	$(".snow").css( "z-index", "800" );	
+	// 	}
+	// };
+	// showSnow();
 });
 
 
@@ -127,7 +142,7 @@ $(function() {
 TweenMax.to(".portal", 1, {scale: 1.1, yoyo: true, repeat: -1});
 
 $(function () {
-	$(".treeTrailer").hide();
+	$(".treeTrailer, .navigationHidden").hide();
 	$(".portal-link").click(function(e) {
 		TweenMax.killTweensOf($(".portal"));
 		$(".background-tree").fadeIn("show", 1).css("background-image", "url(../../assets/img/tree/img/upside-down.png)")
@@ -135,6 +150,40 @@ $(function () {
 		TweenMax.fromTo(".treeTrailer", 1.2, {scale: 0}, {scale: 1});
 		$(".treeText").fadeOut();
 	});
+
+	document.getElementById("treeVideo").addEventListener('ended',treeVideoHandler,false);
+	document.getElementById("lightsVideo").addEventListener('ended',lightsVideoHandler,false);
+
+	    function treeVideoHandler(e) {
+	        e.preventDefault();
+	        $(".treeTrailer").fadeOut(3000);
+	        $(".navigationHidden").fadeIn(6000);
+	    };
+
+	    function lightsVideoHandler(e) {
+	        e.preventDefault();
+	        $(".lightsTrailer").fadeOut(3000);
+	        $(".navigationHidden").fadeIn(6000);
+	    };
+
+
+	// var video = document.getElementsByTagName("video")[0];
+	// var $window = $(window);
+
+	// $(video).click("play", function() { 
+	// 	$(window).resize(function(){
+	// 	    var height = $window.height();
+	// 	    $(video).css('height', height);
+
+	// 	    var videoWidth = $(video).width(),
+	// 	        windowWidth = $window.width();
+	// 	    //marginLeftAdjust =   (windowWidth - videoWidth) / 2;
+
+	// 	    // $(video).css('height', height);
+	// 	}).resize();
+	// }, true);
+
+	
 });
 
 

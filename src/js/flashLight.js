@@ -39,15 +39,15 @@ function flashLight (light, {height, width, backgroundColor}) {
 }
 
 
-if(window.innerWidth <= 500) {
-	flashLight('.flashlight', {
-		height:100,
-		width:100,
-	});
-
-}else{
+if(window.innerWidth >= 768) {
 	flashLight('.flashlight', {
 		height:250,
 		width:250,
 	});
 }
+
+
+
+
+
+

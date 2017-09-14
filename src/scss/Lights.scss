@@ -75,11 +75,11 @@
 }
 
 .backgroundLights {
-	background-image: url(../../assets/img/Lights/Mobile/img/no-lights-03.png);
+	background-image: url(../../assets/img/Lights/Mobile/img/all-lights.png);
 	z-index: 2;
 
 	@media (min-width: 768px) {
-		background-image: url(../../assets/img/Lights/Tablet/img/No-light.png);
+		background-image: url(../../assets/img/Lights/Tablet/img/all-lights.png);
 	}
 
 	@media (min-width: 960px) {
