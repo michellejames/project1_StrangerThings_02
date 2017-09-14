@@ -1,5 +1,54 @@
 console.log("Stranger Things happen...");
 
+///// Preloadables /////
+
+
+var preloadables = [
+	"assets/img/Lights/Mobile/img/no-lights-03.png",
+	"assets/img/Lights/Tablet/img/No-light.png",
+	"assets/img/Lights/Desktop/img/No-lights.png",
+	"assets/img/Lights/Mobile/img/H-light-03.png",
+	"assets/img/Lights/Tablet/img/H-light.png",
+	"assets/img/Lights/Desktop/img/H-light.png",
+	"assets/img/Lights/Mobile/img/E-light-03.png",
+	"assets/img/Lights/Tablet/img/E-light.png",
+	"assets/img/Lights/Desktop/img/E-light.png",
+	"assets/img/Lights/Mobile/img/L-light-03.png",
+	"assets/img/Lights/Tablet/img/L-light.png",
+	"assets/img/Lights/Desktop/img/L-light.png",
+	"assets/img/Lights/Mobile/img/P-light-03.png",
+	"assets/img/Lights/Tablet/img/P-light.png",
+	"assets/img/Lights/Desktop/img/P-light.png",
+	"assets/img/Lights/Mobile/img/no-lights-03.png",
+	"assets/img/Lights/Tablet/img/No-light.png",
+	"assets/img/Lights/Desktop/img/all-lights.png",
+	"assets/img/character_page/img/Nancy.png",
+	"assets/img/character_page/img/Lucas.png",
+	"assets/img/character_page/img/Steve.png",
+	"assets/img/character_page/img/Jonathan.png",
+	"assets/img/character_page/img/Dustin.png",
+	"assets/img/character_page/img/Joyce.png",
+	"assets/img/character_page/img/Mike.png",
+	"assets/img/character_page/img/Will.png",
+	"assets/img/character_page/img/Hopper.png",
+	"assets/img/character_page/img/Eleven.png",
+	"assets/img/tree/img/normaltree-02.png",
+	//"assets/img/tree/img/upside-down.png",
+	"assets/img/tree/img/portal-02.png",
+
+]
+var preloadingImage;
+
+var preloadHolder = document.createElement("div");
+preloadHolder.className = "preload-holder";
+document.body.appendChild(preloadHolder);
+
+for (var i = 0; i < preloadables.length; i++) {
+	preloadingImage = new Image();
+	preloadingImage.src = preloadables[i];
+	preloadHolder.appendChild(preloadingImage);
+};
+
 ////// Index //////
 
 TweenMax.fromTo(".lights", 2, {opacity: 0, left: -50, top: -100, delay:4}, {opacity: 1, left: 0, top: 0, delay: 2});
