@@ -1,0 +1,204 @@
+@import "Navigation";
+
+.backgroundAnimation {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.background {
+	background-image: url(../../assets/img/Lights/Mobile/img/no-lights-03.png);
+	z-index: 25;
+
+	@media (min-width: 768px) {
+		background-image: url(../../assets/img/Lights/Tablet/img/No-light.png);
+	}
+
+	@media (min-width: 960px) {
+		background-image: url(../../assets/img/Lights/Desktop/img/No-lights.png);
+	}
+}
+
+.backgroundH {
+	background-image: url(../../assets/img/Lights/Mobile/img/H-light-03.png);
+	z-index: 20;
+
+	@media (min-width: 768px) {
+		background-image: url(../../assets/img/Lights/Tablet/img/H-light.png);
+	}
+
+	@media (min-width: 960px) {
+		background-image: url(../../assets/img/Lights/Desktop/img/H-light.png);
+	}
+}
+
+.backgroundE {
+	background-image: url(../../assets/img/Lights/Mobile/img/E-light-03.png);
+	z-index: 15;
+
+	@media (min-width: 768px) {
+		background-image: url(../../assets/img/Lights/Tablet/img/E-light.png);
+	}
+
+	@media (min-width: 960px) {
+		background-image: url(../../assets/img/Lights/Desktop/img/E-light.png);
+	}
+}
+
+.backgroundL {
+	background-image: url(../../assets/img/Lights/Mobile/img/L-light-03.png);
+	z-index: 10;
+
+	@media (min-width: 768px) {
+		background-image: url(../../assets/img/Lights/Tablet/img/L-light.png);
+	}
+
+	@media (min-width: 960px) {
+		background-image: url(../../assets/img/Lights/Desktop/img/L-light.png);
+	}
+}
+
+.backgroundP {
+	background-image: url(../../assets/img/Lights/Mobile/img/P-light-03.png);
+	z-index: 5;
+
+	@media (min-width: 768px) {
+		background-image: url(../../assets/img/Lights/Tablet/img/P-light.png);
+	}
+
+	@media (min-width: 960px) {
+		background-image: url(../../assets/img/Lights/Desktop/img/P-light.png);
+	}
+}
+
+.backgroundLights {
+	background-image: url(../../assets/img/Lights/Mobile/img/no-lights-03.png);
+	z-index: 2;
+
+	@media (min-width: 768px) {
+		background-image: url(../../assets/img/Lights/Tablet/img/No-light.png);
+	}
+
+	@media (min-width: 960px) {
+		background-image: url(../../assets/img/Lights/Desktop/img/all-lights.png);
+	}
+}
+
+.lightButton {
+	position: absolute;
+	z-index: 100;
+	width: 40px;
+	height: 60px;
+	padding: 20px;
+	cursor: pointer;
+
+	&.activeButton {
+		border: 2px solid transparent;
+	}
+
+	@media screen and (min-width: 768px) {
+		width: 80px;
+		height: 90px;
+	}
+}
+
+.Hlight {
+	top: 10%;
+	left: 76%;
+	border: 2px solid transparent;
+	background: transparent;
+
+	// @media screen and (min-width: 768px) {
+	// 	top: 10%;
+	// 	left: 76%;
+	// }
+
+	// @media screen and (min-width: 960px) {
+	// 	top: 87.5%;
+	// 	font-size: 1.2rem;
+	// }
+}
+
+.Elight {
+	top: 13%;
+	left: 42%;
+	background: transparent;
+	border: 2px solid transparent;
+
+	@media screen and (min-width: 768px) {
+		left: 48%;
+	}
+}
+
+.Llight {
+	top: 41%;
+    left: 21%;
+	background: transparent;
+	border: 2px solid transparent;
+
+	@media screen and (min-width: 768px) {
+		top: 37%;
+	    left: 30%;
+	}
+}
+
+.Plight {
+	top: 39%;
+    left: 62%;
+	background: transparent;
+	border: 2px solid transparent;
+
+	@media screen and (min-width: 768px) {
+		top: 35%;
+	    left: 65%;
+	}
+}
+
+.lightsTrailer{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 90%;
+	z-index: 500;
+
+	@media (min-width: 768px) {
+		width: 70%;
+	}	
+}
+
+.netflix-white {
+	z-index: 100;
+	width: 21.875%;
+	position: absolute;
+	top: 5%;
+	left: 10%;
+
+	@media (min-width: 960px) {
+		width: 7.96875%;
+		left: 5.572916667%;
+	}
+}
+
+.logo-small {
+	z-index: 100;
+	width: 16.66666667%;
+	position: absolute;
+	right: 10%;
+	bottom: 5%;
+
+	@media (min-width: 768px) {
+		width: 18.75%;
+		right: 6.770833333%;
+	}
+
+	@media (min-width: 960px) {
+		width: 9.114583333%;
+		right: 3.541666667%;
+	}
+}
+
+

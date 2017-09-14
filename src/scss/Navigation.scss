@@ -1,0 +1,88 @@
+.navigation {
+	position: absolute;
+	width: 100%;
+	bottom: 4.678362573%;
+	z-index: 500;
+
+	@media (min-width: 500px) {
+		max-width: 80%;
+	}
+
+	@media (min-width: 640px) {
+		width: 35.9375%;
+	}
+}
+
+.arrow {
+	z-index: 100;
+	background-image: url(../../assets/img/Lights/Desktop/img/next-arrow.svg);
+	background-repeat: no-repeat;
+	border: 3px solid #b61406;
+	position: absolute;
+	width: 3%;
+	height: 5%;
+	padding: 5%;
+	bottom: 5.719298246%;
+	opacity: .5;
+
+	&:hover {
+		opacity: 1;
+		-webkit-box-shadow: 0px 0px 78px 2px rgba(182,20,6,1);
+		-moz-box-shadow: 0px 0px 78px 2px rgba(182,20,6,1);
+		box-shadow: 0px 0px 78px 2px rgba(182,20,6,1);
+	}
+	
+}
+
+.previous {
+	z-index: 100;
+	transform: rotate(180deg);
+	left: 8.958333333%;
+}
+
+.next {
+	z-index: 100;
+	left: 51.04166667%;
+}
+
+.circle {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background: #b61406;
+	background-repeat: no-repeat;
+	border-radius: 100px;
+	margin-bottom: 4.187135%;
+	bottom: 5%;
+	opacity: .5;
+
+	&:hover {
+		opacity: 1;
+		-webkit-box-shadow: 0px 0px 78px 2px rgba(182,20,6,1);
+		-moz-box-shadow: 0px 0px 78px 2px rgba(182,20,6,1);
+		box-shadow: 0px 0px 78px 2px rgba(182,20,6,1);
+	}
+}
+
+.circle1 {
+    left: 24.083333%;
+}
+
+.circle2 {
+	left: 30.716667%;
+}
+
+.circle3 {
+	left: 37.708333%;
+}
+
+.circle4 {
+	left: 44.708333%;
+}
+
+.active {
+	opacity: 1;
+	-webkit-box-shadow: 0px 0px 78px 2px rgba(182,20,6,1);
+	-moz-box-shadow: 0px 0px 78px 2px rgba(182,20,6,1);
+	box-shadow: 0px 0px 78px 2px rgba(182,20,6,1);
+}

@@ -17,44 +17,46 @@
 <!-- 	    <link rel="stylesheet" href="src/css/reset.css">
  -->	    <link rel="stylesheet" href="assets/css/main.css">
 	</head>
-	<body>
+	<body class="lightsPage">
 
-		<section id="scene">
-			<div class="layer background-layer" data-depth="0.2">
-				<canvas class="snow" width="1920" height="1920" />
+		<div class="wrapper">
+
+			<canvas id="snow" class="snow"></canvas>
+
+			<div class="backgroundAnimation background"></div>
+			<div class="backgroundAnimation backgroundH"></div>
+			<div class="backgroundAnimation backgroundE"></div>
+			<div class="backgroundAnimation backgroundL"></div>
+			<div class="backgroundAnimation backgroundP"></div>
+			<div class="backgroundAnimation backgroundLights"></div>
+
+			<button class="lightButton Hlight"></button>
+			<button class="lightButton Elight"></button>
+			<button class="lightButton Llight"></button>
+			<button class="lightButton Plight"></button>
+
+			<img class="netflix-white" src="assets/img/Lights/Desktop/img/Netflix-white.png" alt="">
+
+			<video class="lightsTrailer" controls="control" type="video/mp4" src="assets/img/Lights/Desktop/video/joyce_05.mp4">
+			Sorry, your browser doesn't support embedded videos, 
+			but don't worry, you can <a href="https://vimeo.com/228320823">watch it</a>
+			right here!
+			</video>
+
+			<div class="navigation">	
+				<a href="index.html"><div class="arrow previous"></div></a>
+					<a href="index.html" class="circle circle1"></a>
+					<a href="lights.html" class="circle circle2 active"></a>
+					<a href="character.html" class="circle circle3"></a>
+					<a href="tree.html" class="circle circle4"></a>
+				<a href="character.html"><div class="arrow next"></div></a>
 			</div>
-			<div class="layer lights-layer" data-depth="0.5"></div>
-			<div class="layer hand-layer" data-depth="0.75"></div>
-			<div class="layer tree-layer" data-depth="0.85"></div>
-		</section>
 
-		<div class="backgroundTest backgroundH"></div>
-		<div class="backgroundTest backgroundE"></div>
-		<div class="backgroundTest backgroundL"></div>
-		<div class="backgroundTest backgroundP"></div>
-		<div class="backgroundTest background"></div>
-
-		<img class="netflix-white" src="assets/img/Lights/Desktop/img/Netflix-white.png" alt="">
-
-		<video class="lights-trailer" controls="control" type="video/mp4" src="assets/img/Lights/Desktop/video/joyce_05.mp4">
-		Sorry, your browser doesn't support embedded videos, 
-		but don't worry, you can <a href="https://vimeo.com/228320823">watch it</a>
-		right here!
-		<source src="https://vimeo.com/228320823" >
-		</video>
-
-
-
-		<div class="navigation">	
-			<div class="arrow previous"></div>
-			<div class="circle circle1 active"></div>
-			<div class="circle circle2"></div>
-			<div class="circle circle3"></div>
-			<div class="arrow next active"></div>
+			<img class="logo-small" src="assets/img/Lights/Desktop/img/StrangerThings2.png" alt="">
+		
 		</div>
 
-		<img class="logo-small" src="assets/img/Lights/Desktop/img/StrangerThings2.png" alt="">
-
+		<script src="src/js/snow.js"></script>
 		<script
 		  src="https://code.jquery.com/jquery-3.2.1.js"
 		  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
