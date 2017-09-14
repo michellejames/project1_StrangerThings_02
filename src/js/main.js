@@ -104,6 +104,13 @@ $(function () {
 		if ($(".Hlight").hasClass("activeButton") && $(".Elight").hasClass("activeButton") && $(".Llight").hasClass("activeButton") && $(".Plight").hasClass("activeButton")) {
 			$( ".lightButton" ).hide();
 			$(".lightsTrailer").fadeTo( "slow", 1 ); //shouldn't this overwrite line 103? why not?	  	
+
+		var lightsVideo = document.getElementById("lightsVideo").addEventListener('ended',lightsVideoHandler,false);
+		    function lightsVideoHandler(e) {
+		        e.preventDefault();
+		        $(".lightsTrailer").fadeOut(3000);
+		        $(".navigationHidden").fadeIn(6000);
+		    };
 		}
 	});
 
@@ -151,18 +158,11 @@ $(function () {
 		$(".treeText").fadeOut();
 	});
 
-	document.getElementById("treeVideo").addEventListener('ended',treeVideoHandler,false);
-	document.getElementById("lightsVideo").addEventListener('ended',lightsVideoHandler,false);
+	var treeVido = document.getElementById("treeVideo").addEventListener('ended',treeVideoHandler,false);
 
 	    function treeVideoHandler(e) {
 	        e.preventDefault();
 	        $(".treeTrailer").fadeOut(3000);
-	        $(".navigationHidden").fadeIn(6000);
-	    };
-
-	    function lightsVideoHandler(e) {
-	        e.preventDefault();
-	        $(".lightsTrailer").fadeOut(3000);
 	        $(".navigationHidden").fadeIn(6000);
 	    };
 
