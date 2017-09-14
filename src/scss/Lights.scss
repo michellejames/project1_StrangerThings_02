@@ -89,7 +89,7 @@
 
 .lightButton {
 	position: absolute;
-	z-index: 100;
+	z-index: 501;
 	width: 40px;
 	height: 60px;
 	padding: 20px;
@@ -111,15 +111,15 @@
 	border: 2px solid transparent;
 	background: transparent;
 
-	// @media screen and (min-width: 768px) {
-	// 	top: 10%;
-	// 	left: 76%;
-	// }
+	@media screen and (min-width: 768px) {
+		top: 10%;
+		left: 76%;
+	}
 
-	// @media screen and (min-width: 960px) {
-	// 	top: 87.5%;
-	// 	font-size: 1.2rem;
-	// }
+	@media screen and (min-width: 960px) {
+		top: 16.5%;
+		left: 76%;
+	}
 }
 
 .Elight {
@@ -130,6 +130,11 @@
 
 	@media screen and (min-width: 768px) {
 		left: 48%;
+	}
+
+	@media screen and (min-width: 960px) {
+		top: 18%;
+		left: 59%;
 	}
 }
 
@@ -143,6 +148,10 @@
 		top: 37%;
 	    left: 30%;
 	}
+
+	@media screen and (min-width: 960px) {
+		left: 50%;
+	}
 }
 
 .Plight {
@@ -154,6 +163,11 @@
 	@media screen and (min-width: 768px) {
 		top: 35%;
 	    left: 65%;
+	}
+	
+	@media screen and (min-width: 960px) {
+		top: 32%;
+		left: 70%;
 	}
 }
 

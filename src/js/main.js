@@ -55,6 +55,13 @@ $(function () {
 			$(".lightsTrailer").fadeTo( "slow", 1 ); //shouldn't this overwrite line 103? why not?	  	
 		}
 	});
+
+	function lightsFlickering() {
+	    setInterval(function(){ 
+	    	$(".backgroundLights").fadeIn(500).css( "z-index", "800" ).fadeOut(500);
+	    }, 4500);
+	}
+	lightsFlickering();
 });
 
 // Character Page //
