@@ -119,9 +119,9 @@ $(function () {
 	    	$(".backgroundLights").fadeIn(50).css( "z-index", "800" ).fadeOut(50);
 	    }, 4500);
 
-	    if ($(".lightsTrailer").fadeTo(50)) {
-	    	clearInterval(flickering);
-	    }
+	    // if ($(".lightsTrailer").fadeTo( "slow", 1 )) {
+	    // 	clearInterval(flickering);
+	    // }
 	}
 	lightsFlickering();
 
