@@ -2,6 +2,11 @@
 $body-font: "proxima-nova", Helvetica, sans-serif;
 $specialFont: "BenguiatBold";
 
+@font-face {
+  font-family: 'BenguiatBold';
+  src: url('../../assets/fonts/BenguiatBold.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
 .nancy-link {
     width: 100%;
     height: 100%;
@@ -257,7 +262,7 @@ $specialFont: "BenguiatBold";
                 width: 40%;
             }
                 h1 {    
-                	font-family: $specialFont;
+                	font-family: 'BenguiatBold', sans-serif;
                     position: relative;
                     margin: 0px 0 0px 17%;
                     font-size: 3rem;

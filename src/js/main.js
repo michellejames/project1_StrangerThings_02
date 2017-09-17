@@ -79,6 +79,7 @@ $(function () {
 
     var flickering = setInterval(function(){ 
     	$(".backgroundLights").fadeIn(50).css( "z-index", "800" ).fadeOut(50);
+    	$(".lights").fadeOut(1000).fadeIn(10);
     }, 4500);
 
     var lightsVideo = document.getElementById("lightsVideo").addEventListener('ended',lightsVideoHandler,false);

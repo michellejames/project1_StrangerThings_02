@@ -1,26 +1,52 @@
 .navigationHidden {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 900;
-	display: flex;
-	
-	& a {
-		text-decoration: none;
-		color: #8c8d8c;
+    position: absolute;
+    top: 250px;
+    left: 15%;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 900;
+    width: 70%;
+    // border: 2px solid white;
+    font-family: "proxima-nova", sans-serif;    
+    font-size: 1.5rem;
 
-		@media (min-width: 768px) {
-			font-size: 1.5rem;
-		}
+    @media(min-width: 768px) {
+        top: 450px;
+    }
 
-		@media (min-width: 960px) {
-			font-size: 2.5rem;
-		}
-	}
+    @media(min-width: 960px) {
+        top: 210px;
+        height: 260px;
+    }
+    
+    & a {
+        width: 100%;
+        text-decoration: none;
+        color: #ae2127 ;
+        border: 3px solid #ae2127 ;
+        padding: 20px;
+        font-weight: 500;
+        letter-spacing: .6px;
+        text-align: center;
+        transition: .5s;
+        background-color: rgba(255, 255, 255, .075);
 
-	& a:hover {
-		border-bottom: 2px solid #8c8d8c;
-	}	
+        @media (min-width: 768px) {
+            font-size: 1.5rem;
+        }
+
+        @media (min-width: 960px) {
+            font-size: 2.5rem;
+            margin-top: 30px;
+        }
+    }
+
+    & a:hover {
+        background-color: #ae2127 ;
+        transition: .5s;
+        color: white;
+    }    
 }
-

@@ -1,78 +1,77 @@
 @import "Navigation";
 @import "NavigationHidden";
-
 .background-tree {
-	background-image: url(../../assets/img/tree/img/normaltree-02.png);
-	width: 100%;
-	height: 100%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: 90%;
-	transition: all 0.4s ease;
+    background-image: url(../../assets/img/tree/img/normaltree-02.png);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 90%;
+    transition: all 0.4s ease;
 }
-
 .portal-link {
-	position: absolute;
-	z-index: 300;
-	width: 41.66666667%;
-	top: 26.766082%;
-	left: 58.33333333%;
-
-	@media screen and (min-width: 768px) {
-		width: 37.5%;
-	    top: 0;
-	    left: 67.291667%;
-	}
-
-	@media screen and (min-width: 960px) {
-	    width: 19.0625%;
-	    top: 22%;
-	    left: 77.291667%;
-	}
+    // width: 100%;
+    // height: 100%;
+    // z-index: 20;
+    position: absolute;
+    z-index: 300;
+    width: 41.66666667%;
+    top: 26.766082%;
+    left: 58.33333333%;
+    @media screen and (min-width: 768px) {
+        width: 37.5%;
+        top: 0;
+        left: 67.291667%;
+    }
+    @media screen and (min-width: 960px) {
+        width: 19.0625%;
+        top: 22%;
+        left: 77.291667%;
+    }
 }
-
-
 .portal {
-	width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
+    // width: 41.66666667%;
+    // position: absolute;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
-
 .treeText {
-	position: absolute;
-	top: 57.081871%;
-	left: 11.45833333%;
-	z-index: 25;
-	width: 40%;
+    position: absolute;
+    top: 60%;
+    left: 9%;
+    z-index: 5000;
+    width: 80%;
     line-height: 200%;
-
-	& span {
-		color: #8c8d8c;
-		font-size: 1.5rem;
-	}
-	
-	@media screen and (min-width: 960px) {
-		text-align: center;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		
-		.treeText-large {
-			font-size: 2.5rem;
-		}
-	}
+    color: white;
+    opacity: .3;
+    font-family: "proxima-nova", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: .5px;
+    @media(min-width: 768px) {
+        font-size: 2.5rem;
+        line-height: 170%;
+        top: 50%;
+        opacity: .3;
+    }
+     @media(min-width: 960px) {
+        font-size: 2.2rem;
+        line-height: 170%;
+        top: 45%;
+        left: 5%;
+        opacity: .2;
+    }
 }
-
 .treeTrailer{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 90%;
-	z-index: 500;
-
-	@media screen and (min-width: 768px) {
-		width: 70%;
-	}	
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    z-index: 500;
+    @media screen and (min-width: 768px) {
+        width: 70%;
+    }   
 }
