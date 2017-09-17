@@ -2,7 +2,6 @@ console.log("Stranger Things happen...");
 
 ///// Preloadables /////
 
-
 var preloadables = [
 	"assets/img/Lights/Mobile/img/no-lights-03.png",
 	"assets/img/Lights/Tablet/img/No-light.png",
@@ -33,12 +32,12 @@ var preloadables = [
 	"assets/img/character_page/img/Hopper.png",
 	"assets/img/character_page/img/Eleven.png",
 	"assets/img/tree/img/normaltree-02.png",
-	//"assets/img/tree/img/upside-down.png",
+	"assets/img/tree/img/upside-down.png",
 	"assets/img/tree/img/portal-02.png",
 	"assets/img/Lights/Mobile/img/all-lights.png",
 	"assets/img/Lights/Tablet/img/all-lights.png",
+];
 
-]
 var preloadingImage;
 
 var preloadHolder = document.createElement("div");
@@ -49,7 +48,7 @@ for (var i = 0; i < preloadables.length; i++) {
 	preloadingImage = new Image();
 	preloadingImage.src = preloadables[i];
 	preloadHolder.appendChild(preloadingImage);
-};
+}
 
 ////// Index //////
 
@@ -70,7 +69,6 @@ if (window.innerWidth < 960) {
 	TweenMax.fromTo(".hand", 1, {rotation: 0}, {rotation: 5, yoyo: true, repeat: 4, delay: 4});
 	TweenMax.fromTo(".tree", 2, {scale: 1}, {scale: 1.1, yoyo: true, repeat: 4});
 	TweenMax.fromTo(".season", 2.5, {opacity: 0, scale: 1, delay: 3.5}, {opacity: 1, scale: 1, delay: 3.5});
-
 }
 
 /////////// LIGHTS PAGE /////////////
@@ -79,61 +77,53 @@ TweenMax.staggerTo(".backgroundAnimation", 3, {delay: 1, opacity: 0, yoyo: true,
 
 $(function () {
 
+    var flickering = setInterval(function(){ 
+    	$(".backgroundLights").fadeIn(50).css( "z-index", "800" ).fadeOut(50);
+    }, 4500);
+
+    var lightsVideo = document.getElementById("lightsVideo").addEventListener('ended',lightsVideoHandler,false);
+    function lightsVideoHandler(e) {
+        e.preventDefault();
+        $(".lightsTrailer").fadeOut(3000);
+        $(".navigationHidden").fadeIn(6000);
+    }
+
 	$(".lightsTrailer").hide();
 	TweenMax.fromTo(".lightButton", 2, {opacity: 0, delay: 6}, {opacity: 1, delay: 6});
 
 	$(".Hlight" ).click(function(e) {
-		$(".backgroundH").fadeIn("slow", 2).css( "z-index", "80" ).fadeOut(1000).addClass("activeH");
+		$(".backgroundH").fadeIn("slow", 2).css( "z-index", "80" ).addClass("activeH");
 	});
 
 	$(".Elight" ).click(function(e) {
-		$(".backgroundE").fadeIn("slow", 2).css( "z-index", "81" ).fadeOut(1000).addClass("activeE");
+		$(".backgroundE").fadeIn("slow", 2).css( "z-index", "81" ).addClass("activeE");
 	});
 
 	$(".Llight" ).click(function(e) {
-		$(".backgroundL").fadeIn("slow", 2).css( "z-index", "82" ).fadeOut(1000).addClass("activeL");
+		$(".backgroundL").fadeIn("slow", 2).css( "z-index", "82" ).addClass("activeL");
 	});
 
 	$(".Plight" ).click(function(e) {
-		$(".backgroundP").fadeIn("slow", 2).css( "z-index", "83" ).fadeOut(1000).addClass("activeP");
+		$(".backgroundP").fadeIn("slow", 2).css( "z-index", "83" ).addClass("activeP");
 	});
 
 	$( ".lightButton" ).click(function(e) {
 		$(this).toggleClass("activeButton");
 		
 		if ($(".Hlight").hasClass("activeButton") && $(".Elight").hasClass("activeButton") && $(".Llight").hasClass("activeButton") && $(".Plight").hasClass("activeButton")) {
+			clearInterval(flickering);
 			$( ".lightButton" ).hide();
-			$(".lightsTrailer").fadeTo( "slow", 1 ); //shouldn't this overwrite line 103? why not?	  	
-
-		var lightsVideo = document.getElementById("lightsVideo").addEventListener('ended',lightsVideoHandler,false);
-		    function lightsVideoHandler(e) {
-		        e.preventDefault();
-		        $(".lightsTrailer").fadeOut(3000);
-		        $(".navigationHidden").fadeIn(6000);
-		    };
+			$(".lightsTrailer").fadeTo( "slow", 1 );
 		}
 	});
-
-	function lightsFlickering() {
-	    var flickering = setInterval(function(){ 
-	    	$(".backgroundLights").fadeIn(50).css( "z-index", "800" ).fadeOut(50);
-	    }, 4500);
-
-	    // if ($(".lightsTrailer").fadeTo( "slow", 1 )) {
-	    // 	clearInterval(flickering);
-	    // }
-	}
-	lightsFlickering();
-
-
 });
 
-// Character Page //
+/////// Character Page //////////
 
 $(function() {
-	$('.arrowImg').on('click', function() {
-		$('.drawer').hide();
-	});
+	// $('.arrowImg').on('click', function() {
+	// 	$('.drawer').hide();
+	// });
 
 	// function showSnow() {
 	// 	if ($("canvas").hasClass("characterPageSnow")) {
@@ -141,6 +131,19 @@ $(function() {
 	// 	}
 	// };
 	// showSnow();
+
+	$(function() {
+	    $('.grayscale').on('click', function() {
+	        $('.drawer').addClass('slide-up');
+	            if (window.innerWidth > 960) { 
+	                ('.drawer').addClass('slide-right');
+	            }
+	    });
+	    $('.swipeUp').on('click', function() {
+	        $('.drawer').removeClass('slide-up');
+	    });
+	});
+
 });
 
 
@@ -152,7 +155,7 @@ $(function () {
 	$(".treeTrailer, .navigationHidden").hide();
 	$(".portal-link").click(function(e) {
 		TweenMax.killTweensOf($(".portal"));
-		$(".background-tree").fadeIn("show", 1).css("background-image", "url(../../assets/img/tree/img/upside-down.png)")
+		$(".background-tree").fadeIn("show", 1).css("background-image", "url(../../assets/img/tree/img/upside-down.png)");
 		$(".treeTrailer").fadeIn(1500);
 		TweenMax.fromTo(".treeTrailer", 1.2, {scale: 0}, {scale: 1});
 		$(".treeText").fadeOut();
@@ -164,7 +167,7 @@ $(function () {
 	        e.preventDefault();
 	        $(".treeTrailer").fadeOut(3000);
 	        $(".navigationHidden").fadeIn(6000);
-	    };
+	    }
 
 
 	// var video = document.getElementsByTagName("video")[0];
@@ -182,8 +185,6 @@ $(function () {
 	// 	    // $(video).css('height', height);
 	// 	}).resize();
 	// }, true);
-
-	
 });
 
 

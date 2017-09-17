@@ -1,3 +1,5 @@
+console.log("Joint plugin with Kenneth J. Blanton");
+
 function flashLight (light, {height, width, backgroundColor}) {
 	
 	this.light = light;
@@ -29,14 +31,14 @@ function flashLight (light, {height, width, backgroundColor}) {
 		cursorY = e.pageY;
 		$(flash).css('top', cursorY + 'px');
     	$(flash).css('left', cursorX + 'px');
-	}
+	};
 
 	$(document).on("swipe", function(e){ 
 		cursorX = e.pageX;
 		cursorY = e.pageY;
 		$(flash).css("top", cursorY + "px");
     	$(flash).css("left", cursorX + "px");
-   	})
+   	});
 }
 
 

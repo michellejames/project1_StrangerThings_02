@@ -11,7 +11,7 @@ var canvas = document.getElementById('snow'),
 window.onresize = function() {
   width = ctx.canvas.width = document.body.offsetWidth,
     height = ctx.canvas.height = document.body.offsetHeight;
-}
+};
 
 function update() {
   for (var i = 0; i < snowflakes.length; i++) {
@@ -33,7 +33,7 @@ Snow.prototype.draw = function() {
   ctx.fillStyle = '#fff';
   ctx.fill();
   ctx.closePath();
-}
+};
 
 Snow.prototype.update = function() {
   this.y -= this.speed;
@@ -43,7 +43,7 @@ Snow.prototype.update = function() {
     this.y = ctx.canvas.height;
     this.x = random(0, width);
   }
-}
+};
 
 function createSnow(count) {
   for (var i = 0; i < count; i++) {
