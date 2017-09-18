@@ -39,19 +39,19 @@
 }
 .treeText {
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 9%;
     z-index: 5000;
     width: 80%;
     line-height: 200%;
     color: white;
     opacity: .3;
-    font-family: "proxima-nova", sans-serif;
+    font-family: 'BenguiatBold', sans-serif;
     font-size: 1.2rem;
     font-weight: 300;
     letter-spacing: .5px;
     @media(min-width: 768px) {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
         line-height: 170%;
         top: 50%;
         opacity: .3;
