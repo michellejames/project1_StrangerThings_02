@@ -77,6 +77,16 @@ TweenMax.staggerTo(".backgroundAnimation", 3, {delay: 1, opacity: 0, yoyo: true,
 
 $(function () {
 
+	var audio = document.getElementById("backgroundMusicLightsPage"); 
+
+	function playAudio() { 
+		audio.play(); 
+	} 
+
+	function pauseAudio() { 
+		audio.pause(); 
+	}
+
     var flickering = setInterval(function(){ 
     	$(".backgroundLights").fadeIn(50).css( "z-index", "800" ).fadeOut(50);
     	$(".lights").fadeOut(1000).fadeIn(10);
@@ -87,6 +97,7 @@ $(function () {
         e.preventDefault();
         $(".lightsTrailer").fadeOut(3000);
         $(".navigationHidden").fadeIn(6000);
+        playAudio();
     }
 
 	$(".lightsTrailer").hide();
@@ -113,6 +124,7 @@ $(function () {
 		
 		if ($(".Hlight").hasClass("activeButton") && $(".Elight").hasClass("activeButton") && $(".Llight").hasClass("activeButton") && $(".Plight").hasClass("activeButton")) {
 			clearInterval(flickering);
+			pauseAudio();
 			$( ".lightButton" ).hide();
 			$(".lightsTrailer").fadeTo( "slow", 1 );
 		}
@@ -133,33 +145,46 @@ $(function() {
 	// };
 	// showSnow();
 
-	$(function() {
-	    $('.grayscale').on('click', function() {
-	        $('.drawer').addClass('slide-up');
-	            if (window.innerWidth > 960) { 
-	                ('.drawer').addClass('slide-right');
-	            }
-	    });
-	    $('.swipeUp').on('click', function() {
-	        $('.drawer').removeClass('slide-up');
-	    });
-	});
+    $('.grayscale').on('click', function() {
+        $('.drawer').addClass('slide-up');
+            if (window.innerWidth > 960) { 
+                ('.drawer').addClass('slide-right');
+            }
+    });
+    $('.swipeUp').on('click', function() {
+        $('.drawer').removeClass('slide-up');
+    });
+
 
 });
 
 
 /////// Tree Page ////////
 
-TweenMax.to(".portal", 1, {scale: 1.1, yoyo: true, repeat: -1});
 
 $(function () {
+
+	TweenMax.to(".portal", 1, {scale: 1.1, yoyo: true, repeat: -1});
+
+	var audio = document.getElementById("backgroundMusicTreePage"); 
+
+	function playAudio() { 
+		audio.play(); 
+	} 
+
+	function pauseAudio() { 
+		audio.pause(); 
+	}
+
 	$(".treeTrailer, .navigationHidden").hide();
+
 	$(".portal-link").click(function(e) {
 		TweenMax.killTweensOf($(".portal"));
 		$(".background-tree").fadeIn("show", 1).css("background-image", "url(../../assets/img/tree/img/upside-down.png)");
+		pauseAudio();
 		$(".treeTrailer").fadeIn(1500);
-		TweenMax.fromTo(".treeTrailer", 1.2, {scale: 0}, {scale: 1});
 		$(".treeText").fadeOut();
+		TweenMax.fromTo(".treeTrailer", 1.2, {scale: 0}, {scale: 1});
 	});
 
 	var treeVido = document.getElementById("treeVideo").addEventListener('ended',treeVideoHandler,false);
@@ -168,6 +193,7 @@ $(function () {
 	        e.preventDefault();
 	        $(".treeTrailer").fadeOut(3000);
 	        $(".navigationHidden").fadeIn(6000);
+	        playAudio();
 	    }
 
 
