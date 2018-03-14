@@ -1,12 +1,72 @@
+// console.log("Joint plugin with Kenneth J. Blanton");
+
+// function flashLight (light, {height, width, backgroundColor}) {
+	
+// 	this.light = light;
+// 	!height ? this.height = 200 : this.height = height;
+// 	!width ? this.width = 200 : this.width = width;
+// 	!backgroundColor ? this.color = "black": this.color = backgroundColor;
+	
+// 	var flash = this.light;
+// 	console.log(flash);
+
+// 	$(flash).parent().css("overflow", "hidden");
+
+// 	$(flash).css({
+// 		"pointer-events": "none",
+// 		"box-sizing": "content-box",
+// 		"height": this.height + "px", 
+// 		"width": this.width + "px", 
+// 		"border-color": this.color, 
+// 		"border-width": window.innerWidth * 2 + "px", 
+// 		"border-style": "solid",
+// 		"border-radius": "50%",
+// 		"filter": "blur(5px)",
+// 		"margin-left":-window.innerWidth*2-(this.width/2), 
+// 		"margin-top": -window.innerWidth*2-(this.width/2), 
+// 		"position": "absolute"});
+
+// 	document.onmousemove = function(e) {
+// 		cursorX = e.pageX;
+// 		cursorY = e.pageY;
+// 		$(flash).css('top', cursorY + 'px');
+//     	$(flash).css('left', cursorX + 'px');
+// 	};
+
+// 	$(document).on("swipe", function(e){ 
+// 		cursorX = e.pageX;
+// 		cursorY = e.pageY;
+// 		$(flash).css("top", cursorY + "px");
+//     	$(flash).css("left", cursorX + "px");
+//    	});
+// }
+
+
+// if(window.innerWidth >= 768) {
+// 	flashLight('.flashlight', {
+// 		height:250,
+// 		width:250,
+// 	});
+// }
+
+
+
+
+
+
+
 console.log("Joint plugin with Kenneth J. Blanton");
 
-function flashLight (light, {height, width, backgroundColor}) {
-	
+function flashLight(light, _ref) {
+	var height = _ref.height,
+	    width = _ref.width,
+	    backgroundColor = _ref.backgroundColor;
+
 	this.light = light;
 	!height ? this.height = 200 : this.height = height;
 	!width ? this.width = 200 : this.width = width;
-	!backgroundColor ? this.color = "black": this.color = backgroundColor;
-	
+	!backgroundColor ? this.color = "black" : this.color = backgroundColor;
+
 	var flash = this.light;
 	console.log(flash);
 
@@ -15,42 +75,37 @@ function flashLight (light, {height, width, backgroundColor}) {
 	$(flash).css({
 		"pointer-events": "none",
 		"box-sizing": "content-box",
-		"height": this.height + "px", 
-		"width": this.width + "px", 
-		"border-color": this.color, 
-		"border-width": window.innerWidth * 2 + "px", 
+		"height": this.height + "px",
+		"width": this.width + "px",
+		"border-color": this.color,
+		"border-width": window.innerWidth * 2 + "px",
 		"border-style": "solid",
 		"border-radius": "50%",
-		"filter": "blur(5px)",
-		"margin-left":-window.innerWidth*2-(this.width/2), 
-		"margin-top": -window.innerWidth*2-(this.width/2), 
-		"position": "absolute"});
+		"filter": "blur(10px)",
+		"margin-left": -window.innerWidth * 2 - this.width / 2,
+		"margin-top": -window.innerWidth * 2 - this.width / 2,
+		"position": "absolute",
+		"zIndex": 200 });
 
-	document.onmousemove = function(e) {
+	document.onmousemove = function (e) {
 		cursorX = e.pageX;
 		cursorY = e.pageY;
 		$(flash).css('top', cursorY + 'px');
-    	$(flash).css('left', cursorX + 'px');
+		$(flash).css('left', cursorX + 'px');
 	};
 
-	$(document).on("swipe", function(e){ 
+	$(document).on("swipe", function (e) {
 		cursorX = e.pageX;
 		cursorY = e.pageY;
 		$(flash).css("top", cursorY + "px");
-    	$(flash).css("left", cursorX + "px");
-   	});
-}
-
-
-if(window.innerWidth >= 768) {
-	flashLight('.flashlight', {
-		height:250,
-		width:250,
+		$(flash).css("left", cursorX + "px");
 	});
 }
 
-
-
-
-
+if (window.innerWidth >= 768) {
+	flashLight('.flashlight', {
+		height: 250,
+		width: 250
+	});
+}
 

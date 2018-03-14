@@ -1,36 +1,43 @@
 @import "Navigation";
 
+.background {
+	background-image: url(../../assets/img/Lights/Mobile/mobile-lights.png);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top right;
+
+	@media screen and (min-width: 600px) {
+		background-image: url(../../assets/img/Lights/Tablet/img/No-light.png);
+	}
+
+	@media screen and (min-width: 900px) {
+		background-image: url(../../assets/img/Lights/Desktop/img/No-lights.png);
+	}
+}
+
 .backgroundAnimation {
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center;
+	background-position: top right;
 }
 
-.background {
-	background-image: url(../../assets/img/Lights/Mobile/mobile-lights.png);
-	z-index: 25;
-
-	@media (min-width: 768px) {
-		background-image: url(../../assets/img/Lights/Tablet/img/No-light.png);
-	}
-
-	@media (min-width: 960px) {
-		background-image: url(../../assets/img/Lights/Desktop/img/No-lights.png);
-	}
-}
 
 .backgroundH {
 	background-image: url(../../assets/img/Lights/Mobile/img/H-light-03.png);
 	z-index: 20;
+	height: 100vh;
 
-	@media (min-width: 768px) {
+	@media screen and (min-width: 600px) {
 		background-image: url(../../assets/img/Lights/Tablet/img/H-light.png);
 	}
 
-	@media (min-width: 960px) {
+	@media screen and (min-width: 900px) {
 		background-image: url(../../assets/img/Lights/Desktop/img/H-light.png);
 	}
 }
@@ -38,12 +45,13 @@
 .backgroundE {
 	background-image: url(../../assets/img/Lights/Mobile/img/E-light-03.png);
 	z-index: 15;
+	height: 100vh;
 
-	@media (min-width: 768px) {
+	@media screen and (min-width: 600px) {
 		background-image: url(../../assets/img/Lights/Tablet/img/E-light.png);
 	}
 
-	@media (min-width: 960px) {
+	@media screen and (min-width: 900px) {
 		background-image: url(../../assets/img/Lights/Desktop/img/E-light.png);
 	}
 }
@@ -51,12 +59,13 @@
 .backgroundL {
 	background-image: url(../../assets/img/Lights/Mobile/img/L-light-03.png);
 	z-index: 10;
+	height: 100vh;
 
-	@media (min-width: 768px) {
+	@media screen and (min-width: 600px) {
 		background-image: url(../../assets/img/Lights/Tablet/img/L-light.png);
 	}
 
-	@media (min-width: 960px) {
+	@media screen and (min-width: 900px) {
 		background-image: url(../../assets/img/Lights/Desktop/img/L-light.png);
 	}
 }
@@ -64,26 +73,75 @@
 .backgroundP {
 	background-image: url(../../assets/img/Lights/Mobile/img/P-light-03.png);
 	z-index: 5;
+	height: 100vh;
 
-	@media (min-width: 768px) {
+	@media screen and (min-width: 600px) {
 		background-image: url(../../assets/img/Lights/Tablet/img/P-light.png);
 	}
 
-	@media (min-width: 960px) {
+	@media screen and (min-width: 900px) {
 		background-image: url(../../assets/img/Lights/Desktop/img/P-light.png);
 	}
 }
 
 .backgroundLights {
-	background-image: url(../../assets/img/Lights/Mobile/img/all-lights.png);
+	background-image: url(../../assets/img/Lights/Mobile/mobile-lights.png);
 	z-index: 2;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top right;
 
-	@media (min-width: 768px) {
+	@media screen and (min-width: 600px) {
 		background-image: url(../../assets/img/Lights/Tablet/img/all-lights.png);
 	}
 
-	@media (min-width: 960px) {
+	@media screen and (min-width: 900px) {
 		background-image: url(../../assets/img/Lights/Desktop/img/all-lights.png);
+	}
+}
+
+.hidden-message1 {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 5000;
+	width: 80%;
+	line-height: 200%;
+	color: white;
+	opacity: .8;
+	font-family: 'BenguiatBold', sans-serif;
+	font-size: 1.2rem;
+	font-weight: 300;
+	letter-spacing: .5px;
+	text-align: center;
+
+	@media screen and (min-width: 600px) {
+		top: 60%;
+	}
+}
+
+.hidden-message2 {
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 5000;
+	width: 80%;
+	line-height: 200%;
+	color: white;
+	opacity: .8;
+	font-family: 'BenguiatBold', sans-serif;
+	font-size: 1rem;
+	font-weight: 300;
+	letter-spacing: .5px;
+	text-align: center;
+
+	@media screen and (min-width: 600px) {
+		top: 70%;
 	}
 }
 
@@ -99,7 +157,7 @@
 		border: 2px solid transparent;
 	}
 
-	@media screen and (min-width: 768px) {
+	@media screen and (min-width: 600px) {
 		width: 80px;
 		height: 90px;
 	}
@@ -108,17 +166,18 @@
 .Hlight {
 	top: 10%;
 	left: 76%;
-	border: 2px solid transparent;
+	border: 2px solid red;
 	background: transparent;
 
-	@media screen and (min-width: 768px) {
-		top: 10%;
+	@media screen and (min-width: 600px) {
+		top: 12%;
 		left: 76%;
 	}
 
-	@media screen and (min-width: 960px) {
+	@media screen and (min-width: 900px) {
 		top: 16.5%;
-		left: 76%;
+		left: auto;
+		right: 25vw;
 	}
 }
 
@@ -126,13 +185,14 @@
 	top: 13%;
 	left: 42%;
 	background: transparent;
-	border: 2px solid transparent;
+	border: 2px solid red;
 
-	@media screen and (min-width: 768px) {
+	@media screen and (min-width: 600px) {
 		left: 48%;
+		top: 14%;
 	}
 
-	@media screen and (min-width: 960px) {
+	@media screen and (min-width: 900px) {
 		top: 18%;
 		left: 59%;
 	}
@@ -142,14 +202,22 @@
 	top: 41%;
     left: 21%;
 	background: transparent;
-	border: 2px solid transparent;
+	border: 2px solid red;
 
-	@media screen and (min-width: 768px) {
-		top: 37%;
+	@media screen and (min-width: 600px) {
+		top: 40%;
 	    left: 30%;
 	}
 
-	@media screen and (min-width: 960px) {
+	@media screen and (min-width: 700px) {
+		top: 48%;
+	}
+
+	@media screen and (min-width: 800px) {
+		top: 58%;
+	}
+
+	@media screen and (min-width: 900px) {
 		left: 50%;
 	}
 }
@@ -158,14 +226,22 @@
 	top: 39%;
     left: 62%;
 	background: transparent;
-	border: 2px solid transparent;
+	border: 2px solid red;
 
-	@media screen and (min-width: 768px) {
-		top: 35%;
+	@media screen and (min-width: 600px) {
+		top: 40%;
 	    left: 65%;
 	}
+
+	@media screen and (min-width: 700px) {
+		top: 48%;
+	}
+
+	@media screen and (min-width: 800px) {
+		top: 55%;
+	}
 	
-	@media screen and (min-width: 960px) {
+	@media screen and (min-width: 900px) {
 		top: 32%;
 		left: 70%;
 	}
@@ -179,8 +255,8 @@
 	width: 90%;
 	z-index: 500;
 
-	@media (min-width: 768px) {
-		width: 70%;
+	@media screen and (min-width: 600px) {
+		width: 60%;
 	}	
 }
 
@@ -191,7 +267,7 @@
 	top: 5%;
 	left: 10%;
 
-	@media (min-width: 960px) {
+	@media screen and (min-width: 900px) {
 		width: 7.96875%;
 		left: 5.572916667%;
 	}
@@ -204,12 +280,12 @@
 	right: 10%;
 	bottom: 5%;
 
-	@media (min-width: 768px) {
-		width: 18.75%;
+	@media screen and (min-width: 600px) {
+		width: 10%;
 		right: 6.770833333%;
 	}
 
-	@media (min-width: 960px) {
+	@media screen and (min-width: 900px) {
 		width: 9.114583333%;
 		right: 3.541666667%;
 	}

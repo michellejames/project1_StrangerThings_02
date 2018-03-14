@@ -1,29 +1,25 @@
 .navigationHidden {
+    // position: absolute;
+    // width: 70%;
+    // height: 180px;
+    // top: 250px;
+    // left: 15%;
     position: absolute;
-    top: 250px;
-    left: 15%;
-    height: 180px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     z-index: 900;
-    width: 70%;
     // border: 2px solid white;
     font-family: "proxima-nova", sans-serif;    
     font-size: 1.5rem;
-
-    @media(min-width: 768px) {
-        top: 450px;
-    }
-
-    @media(min-width: 960px) {
-        top: 210px;
-        height: 260px;
-    }
     
     & a {
         width: 100%;
+        margin-bottom: 5%;
         text-decoration: none;
         color: #ae2127 ;
         border: 3px solid #ae2127 ;
@@ -34,13 +30,12 @@
         transition: .5s;
         background-color: rgba(255, 255, 255, .075);
 
-        @media (min-width: 768px) {
+        @media screen and (min-width: 600px) {
             font-size: 1.5rem;
         }
 
-        @media (min-width: 960px) {
+        @media screen and (min-width: 900px) {
             font-size: 2.5rem;
-            margin-top: 30px;
         }
     }
 

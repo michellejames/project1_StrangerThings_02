@@ -23,15 +23,16 @@ html, body {
 }
 
 .snow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+	opacity: .5;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
 
   .lightsPage & {
 
-  	@media (min-width: 960px) {
+  	@media screen and (min-width: 960px) {
   		z-index: 500;
   	}
   }

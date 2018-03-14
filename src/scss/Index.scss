@@ -19,6 +19,7 @@
 .hand-link {
 	width: 50%;
 	bottom: 0;
+
 	
 	@media screen and (min-width: 768px) {
 		width: 42.70833333%;
@@ -106,6 +107,7 @@
 
 .release {
 	position: absolute;
+	z-index: 20;
 	top: 58.912281%;
 	left: 47%;
 	transform: translate(-50%, -50%);
@@ -118,7 +120,31 @@
 	font-size: .8rem;
 
 	@media screen and (min-width: 768px) {
-		top: 65.234375%;
+		top: 69.234375%;
+	}
+
+	@media screen and (min-width: 960px) {
+		top: 75.5%;
+		font-size: 1.2rem;
+	}
+}
+
+.explore {
+	position: absolute;
+	z-index: 20;
+	top: 69.912281%;
+	left: 47%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 1.75px;
+	font-weight: 100;
+	font-size: .8rem;
+
+	@media screen and (min-width: 768px) {
+		top: 78.234375%;
 	}
 
 	@media screen and (min-width: 960px) {
@@ -126,6 +152,7 @@
 		font-size: 1.2rem;
 	}
 }
+
 
 .lights-trailer {
 

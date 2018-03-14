@@ -6,42 +6,35 @@
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 90%;
+    background-position: 90% center;
     transition: all 0.4s ease;
 }
 .portal-link {
-    // width: 100%;
-    // height: 100%;
-    // z-index: 20;
     position: absolute;
-    z-index: 300;
-    width: 41.66666667%;
-    top: 26.766082%;
+    z-index: 100;
+    // width: 41.66666667%;
+    width: 40vw;
+    // top: 26.766082%;
+    top: 30.766082vh;
     left: 58.33333333%;
-    @media screen and (min-width: 768px) {
-        width: 37.5%;
-        top: 0;
+    @media screen and (min-width: 600px) {
+        width: 30.5%;
+        top: 25.766082vh;
         left: 67.291667%;
     }
-    @media screen and (min-width: 960px) {
+    @media screen and (min-width: 900px) {
         width: 19.0625%;
-        top: 22%;
+        top: 25.766082vh;
         left: 77.291667%;
     }
 }
 .portal {
-    // width: 41.66666667%;
-    // position: absolute;
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 .treeText {
     position: absolute;
     top: 50%;
     left: 9%;
-    z-index: 5000;
     width: 80%;
     line-height: 200%;
     color: white;
@@ -50,13 +43,13 @@
     font-size: 1.2rem;
     font-weight: 300;
     letter-spacing: .5px;
-    @media(min-width: 768px) {
+    @media screen and (min-width: 600px) {
         font-size: 1.8rem;
         line-height: 170%;
         top: 50%;
         opacity: .3;
     }
-     @media(min-width: 960px) {
+     @media screen and (min-width: 900px) {
         font-size: 2.2rem;
         line-height: 170%;
         top: 45%;
@@ -70,8 +63,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
-    z-index: 500;
-    @media screen and (min-width: 768px) {
+    z-index: 150;
+    @media screen and (min-width: 600px) {
         width: 70%;
     }   
 }

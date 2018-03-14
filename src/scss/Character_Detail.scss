@@ -1,129 +1,202 @@
 $body-font: "Proxima Nova", Helvetica, sans-serif;
 
-.drawer {
-	background: rgba(189,36,42,0.95);
-	width: 100%;
-	height: 90%;
-	overflow: hidden;
-	color: white;
+.characterPage {
+    img {
+        cursor: pointer;
+    }
+    .eleven-drawer {
+        position: relative;
+    }
 
-	@media screen and (min-width: 960px) {
-		width: 60%;
-	}		
+    .drawer {
+        font-family: 'BenguiatBold', sans-serif;
+        position: absolute;
+        overflow: hidden;
+        background: rgba(189,36,42,0.90);
+        color: #ffebeb;
+        width: 100%;
+        padding: 5% 10%;
+        height: 85vh;
+        z-index: 1000;
+        transform: translateY(-100%);
+        transition: .6s;
+
+            &.slide-up {
+                transform: translateY(0%);
+            }
+            &.slide-right {
+                transform: translateX(0%);
+            }
+            @media screen and (min-width: 600px) {
+                width: 100%;
+                padding: 5%;
+            }   
+            @media screen and (min-width: 900px) {
+                width: 60%;
+                height: 100%;
+                transform: translateX(-100%);
+            }
+
+        .character-image {
+        	display: flex;
+        	flex-direction: column;
+        	position: relative;
+        	margin-bottom: 10%;
+            width: 100%;
+            height: 25%;
+
+            @media screen and (min-width: 600px) {
+                height: 35%;
+            }
+
+            .character-image-bg {
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: left;
+                width: 100%;
+                height: 100%;
+            }
+
+            .eleven-selfie {
+        		background-image: url(../img/character_page/img/Eleven.png);
+            }
+
+            .hopper-selfie {
+                background-image: url(../img/character_page/img/Hopper.png);
+            }
+
+            .mike-selfie {
+                background-image: url(../img/character_page/img/Mike.png);
+            }
+
+            .dustin-selfie {
+                background-image: url(../img/character_page/img/Dustin.png);
+            }
+
+            .lucas-selfie {
+                background-image: url(../img/character_page/img/Lucas.png);
+            }
+
+            .nancy-selfie {
+                background-image: url(../img/character_page/img/Nancy.png);
+            }
+
+            .steve-selfie {
+                background-image: url(../img/character_page/img/Steve.png);
+            }
+
+            .will-selfie {
+                background-image: url(../img/character_page/img/Will.png);
+            }
+
+            .jonathan-selfie {
+                background-image: url(../img/character_page/img/Jonathan.png);
+            }
+
+
+
+        	.character-name {
+    			font-family: 'BenguiatBold', sans-serif;
+    		    font-size: 2.5rem;
+    		    letter-spacing: .95px;
+    		    position: absolute;
+    		    top: 55%;
+    		    left: 0%;
+
+                &.dustin-drawer,
+                &.nancy-drawer,
+                &.jonathan-drawer,
+                &.steve-drawer,{
+                    font-size: 1.5rem;
+                    top: 71%;
+
+                    @media screen and (min-width: 600px){
+                        font-size: 2.5rem;
+                        top: 55%;
+                    }
+                }
+        	}
+        }
+
+        .character-text {
+        	display: flex;
+        	flex-direction: column;
+        	// margin-top: 20%;
+            font-family: $body-font;
+    		// line-height: 1.75rem;
+            color: #ffebeb;
+            font-size: 1rem;
+
+            @media screen and (min-width: 600px) {
+				margin-top: 10%;
+				font-size: 1.2rem;
+    		}
+
+        	.character-headline {
+	            letter-spacing: .75px;
+	            line-height: 1.5rem;
+	            font-weight: 400;
+        		text-transform: uppercase;
+                font-size: 1.2rem;
+        	}
+
+        	.character-description {
+        		line-height: 20px;
+	            letter-spacing: .15px;
+                font-size: 1rem;
+	        }
+
+            .quote {
+                display: flex;
+                flex-direction: column;
+                // margin: 5% 0;
+
+                .memorable-quote {
+                    margin: 0;
+                }
+
+                .character-quote {
+                    font-weight: bold;
+                    margin: 0;
+                    font-style: italic;
+                }
+            }
+
+        }
+
+        .swipeUp {
+        	display: flex;
+        	justify-content: center;
+        	align-items: center;
+        	position: absolute;
+        	bottom: -60px;
+        	left: 50%;
+        	transform: translate(-50%) rotate(.5turn);
+        	width: 120px;
+        	height: 120px;
+            border-radius: 60px 60px 60px 60px;
+            background: black;
+            cursor: pointer;
+
+            @media screen and (min-width: 900px) {
+				transform: rotate(90deg) translateX(-50%);
+				left: auto;
+				right: -60px;
+				top: 50%;
+    		}
+
+        	.arrowImg {
+        		background: url(../../assets/img/character_detail/img/arrow.png);
+        		background-size: contain;
+        		background-repeat: no-repeat;
+        		width: 40px;
+        		height: 25px;
+        		transform: rotate(.5turn);
+        		margin-top: 45px;
+        	}
+        }
+    }
 }
-
-.elevenSelfie {
-	position: absolute;
-	width: 54.16666667%;
-	top: 6.432748538%;
-	left: 7.291666667%;
-
-	@media screen and (min-width: 960px) {
-		width: 60%;
-	}
-}
-
-.characterName {
-	position: absolute;
-	top: 22.883041%;
-	left: 10.41666667%;
-	font-size: 3.06253em;
-	font-family: $body-font;
-	font-weight: 100;
-
-	@media screen and (min-width: 768px) {
-		left: 16.416667%;
-		font-size: 4rem;
-	}	
-}
-
-.demogorgonText {
-	color: #620E11;
-	position: absolute;
-	top: 12.61988304%;
-	left: 64.5%;
-	text-align: center;
-	font-size: 1em;
-	font-family: $body-font;
-	font-weight: 600;
-
-	@media screen and (min-width: 768px) {
-		left: 69.916667%;
-	}	
-}
-
-.demogorgonImage {
-	position: absolute;
-	width: 14.58333333%;
-	top: 19.88304094%;
-	left: 69.79166667%;
-}
-
-.characterParagraph {
-	position: absolute;
-	left: 10.41666667%;
-	right: 10.41666667%;
-	top: 39.76608187%;
-	font-family: $body-font;
-	font-weight: 100;
-	line-height: 1.5rem;
-
-	& h2 {
-		font-size: 1.3rem;
-	}
-
-	@media screen and (min-width: 768px) {
-	    left: 16.416667%;
-	    line-height: 3rem;
-	    font-size: 1.5rem;
-	}
-}
-
-
-.swipeUp {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	left: 35%;
-	width: 120px;
-	height: 120px;
-	margin-top: 273px;
-	// -moz-border-radius: 50px 0 0 50px;
-    border-radius: 60px 60px 60px 60px;
-    transform: rotate(.5turn);
-    background: black;
-    cursor: pointer;
-    top: 45.28655%;
-
-	.arrowImg {
-		position: relative;
-		background: url(../../assets/img/character_detail/img/arrow.png);
-		background-size: contain;
-		background-repeat: no-repeat;
-		width: 40px;
-		height: 25px;
-		transform: rotate(.5turn);
-		margin-top: 45px;
-	}
-
-	&:hover {
-		opacity: 1;
-		-webkit-box-shadow: 0px 0px 78px 2px rgba(182,20,6,1);
-		-moz-box-shadow: 0px 0px 78px 2px rgba(182,20,6,1);
-		box-shadow: 0px 0px 78px 2px rgba(182,20,6,1);
-	}
-
-	@media screen and (min-width: 768px) {
-	    left: 41%;
-	    margin-top: 440px;
-	    margin-top: 440px
-	}
-}
-
-
-
 
 
 
