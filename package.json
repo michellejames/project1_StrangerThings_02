@@ -1,12 +1,12 @@
 {
-  "name": "gulp-tut",
+  "name": "Stranger Things",
   "version": "1.0.0",
-  "description": "Gulp tutorial for Frameworks Class",
+  "description": "Teaser website for the season two premiere of Netflix Original Show Stranger Things. It guides the user through the key moments in the first episode and features hidden trailer videos.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Michelle James <shellyjames90@yahoo.com>",
+  "author": "@webDevShelly <webDevShelly@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.18.8",
